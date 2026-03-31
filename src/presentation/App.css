@@ -1,0 +1,135 @@
+.app {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+}
+
+.panel {
+  width: min(720px, 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.64) 0%, var(--panel) 100%);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 14px 34px rgba(29, 34, 31, 0.08);
+  padding: 1.4rem;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.8rem;
+}
+
+.brand {
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  font-size: 0.98rem;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.counter {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.counter-value {
+  font-family: var(--font-mono);
+  font-size: clamp(2.6rem, 9vw, 4.4rem);
+  line-height: 1;
+}
+
+.status-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badge {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.28rem 0.68rem;
+  font-size: 0.82rem;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.badge.ok {
+  border-color: color-mix(in srgb, var(--accent), white 35%);
+  background: var(--accent-soft);
+}
+
+.controls {
+  display: grid;
+  gap: 1rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.block {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.label {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+input[type='range'] {
+  width: 100%;
+}
+
+input[type='file'],
+select {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.74);
+  padding: 0.48rem 0.58rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+button {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.75);
+  color: var(--ink);
+  padding: 0.56rem 0.92rem;
+  cursor: pointer;
+}
+
+button.primary {
+  background: var(--accent);
+  color: #f8f7f4;
+  border-color: var(--accent);
+}
+
+.error {
+  border-left: 3px solid #a02828;
+  padding-left: 0.55rem;
+  color: #7c1f1f;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 680px) {
+  .panel {
+    padding: 1rem;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
+}

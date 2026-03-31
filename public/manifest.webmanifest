@@ -1,0 +1,16 @@
+{
+  "name": "Asioto",
+  "short_name": "Asioto",
+  "description": "Accelerometer footstep sound web app",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f4f0e7",
+  "theme_color": "#f2efe8",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
